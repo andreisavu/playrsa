@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="0.91">
+
+  <channel>
+    <title>NetBeans News</title>
+    <description>A selection of news highlights from netbeans.org, opensource IDE and application backplane</description>
+    <link>http://www.netbeans.org/index.html</link>
+    <language>en</language>
+    <webMaster>webmaster@netbeans.org (NetBeans webmaster)</webMaster>
+    <image>
+      <title>NetBeans News</title>
+      <url>http://www.netbeans.org/images_www/v5/nb-logo.gif</url>
+      <link>http://www.netbeans.org/index.html</link>
+      <width>110</width>
+      <height>30</height>
+    </image>
+    <pubDate>Tue, 23 Mar 2010 16:10:20 +0100</pubDate><!-- #TIMESTAMP# -->
+
+      <item>
+    <title>Oracle TechCast: JavaFX - Just Getting Started</title>
+    <link>http://www.netbeans.org/community/news/index.html#1467</link>
+    <description>Oracle TechCasts are live &quot;fireside chats&quot; with experts about new tools, technologies, and trends in application development. Listeners can ask questions via Twitter, Facebook or the media player during these live events.
+In this recent techcast, Nandini Ramani, Director of Java Development at Oracle, talks about innovation, evangelism, and adoption in the JavaFX area.
+
+
+Watch JavaFX - Just Getting Started
+
+Past TechCasts chats
+</description>
+    <pubDate>Tue, 23 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Sappy Plugins Release Adds Accessiblity Support to NetBeans IDE</title>
+    <link>http://netbeans.dzone.com/new-nb-accessibility-support</link>
+    <description>Developed by a team at Southern Illinois University in Edwardsville Sappy in NetBeans is a module suite that allows visually impaired developers to use the NetBeans IDE.</description>
+    <pubDate>Tue, 23 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Preview: NetBeans Platform Development in JavaFX</title>
+    <link>http://netbeans.dzone.com/javafx-in-netbeans-platform</link>
+    <description>A quick look at how the NetBeans team is working to integrate JavaFX components into the NetBeans Platform.</description>
+    <pubDate>Mon, 22 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>2010 JavaOne Call-for-Papers Extended till Tuesday, March 16th!</title>
+    <link>http://www.netbeans.org/community/news/index.html#1465</link>
+    <description>Just in case daylight savings time got the best of you this past weekend, the 2010 JavaOne Call for Papers has been extended.If you have not yet submitted a topic or have additional ideas, you have until 11:59pm US Pacific Time on Tuesday, March 16th to get your abstracts in.Keep the submissions coming&#226;&#128;&#148;this is looking to be the best JavaOne ever!
+
+Click here to submit.</description>
+    <pubDate>Tue, 16 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Ray Simulation Analysis on the NetBeans Platform</title>
+    <link>http://netbeans.org/community/articles/interviews/ray-simulation-analysis.html</link>
+    <description>Computer science professor Lilian Aveneau discusses RaPSor, a framework used for studying and testing algorithms for ray based simulations, and built on the NetBeans Platform.</description>
+    <pubDate>Tue, 16 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Time to Join the NetBeans Community Testing Programs!</title>
+    <link>http://www.netbeans.org/community/news/index.html#1464</link>
+    <description>
+The NetBeans Team is pleased to announce the return of its two community testing programs, NetCAT and NetFIX, for the NetBeans IDE 6.9 release cycle. NetBeans 6.9 feature highlights include in short:
+
+NetBeans Platform OSGi interoperability
+Many enhancements in Editor
+Improved Java FX tooling
+Java EE 6 improvements
+Better PHP, Ruby &amp; C/C++ support
+and much more...
+
+
+To help test NetBeans 6.9 development builds, report bugs and RFEs, sign up for NetCAT, our popular beta testing program. As a NetCAT participant, 
+you provide feedback to our development team and therefore influence the stability and performance of the NetBeans IDE. The requirement is simple: if 
+you can spare a minimum of four hours a week for the next three months, then sign up!
+
+That&#039;s not all. Our NetFIX program is looking for experienced Java developers who enjoy contributing code. Participating in NetFIX is an opportunity to have your name included in the NetBeans source code 
+repository. For former NetCAT participants, NetFIX is also an ideal next step in contributing to the NetBeans project since you learn about NetBeans APIs 
+in the process. So sign up today and join fellow community developers to help grow a more robust NetBeans IDE!
+
+At the end of the NetBeans 6.9 cycle, top participants in both programs receive community recognition as well as gifts from the NetBeans team.
+
+If you have any questions about either of the two programs, please contact NetBeans Community Manager Jiri Kovalsky.</description>
+    <pubDate>Mon, 08 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+
+  </channel>
+</rss>
+

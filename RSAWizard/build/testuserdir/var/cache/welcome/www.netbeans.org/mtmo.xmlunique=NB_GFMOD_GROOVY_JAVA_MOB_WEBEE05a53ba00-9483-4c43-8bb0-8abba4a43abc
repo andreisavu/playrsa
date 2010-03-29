@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="0.91">
+
+<channel>
+  <title>Making the Most of NetBeans</title>
+  <description>A selection of articles and tutorials from netbeans.org, opensource IDE and application backplane</description>
+  <link>http://www.netbeans.org/index.html</link>
+  <language>en</language>
+  <webMaster>webmaster@netbeans.org (NetBeans webmaster)</webMaster>
+  <image>
+    <title>Making the Most of NetBeans</title>
+    <url>http://www.netbeans.org/images_www/v5/nb-logo.gif</url>
+    <link>http://www.netbeans.org/index.html</link>
+    <width>110</width>
+    <height>30</height>
+  </image>
+  <pubDate>Fri, 26 Mar 2010 12:10:32 +0100</pubDate><!-- #TIMESTAMP# -->
+
+    <item>
+    <title>Handling Images in a Java GUI Application</title>
+    <link>http://netbeans.org/kb/docs/java/gui-image-display.html</link>
+    <description>This tutorial shows how to handle images and other resources when creating Swing applications in NetBeans IDE.</description>
+    <pubDate>Fri, 26 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Exploring Macros in C/C++ Projects</title>
+    <link>http://www.netbeans.org/kb/docs/cnd/macro-features.html</link>
+    <description>A short guide to macro features in NetBeans IDE for C/C++.</description>
+    <pubDate>Wed, 24 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>NetBeans IDE Ruby Rails Quick Start Tutorial</title>
+    <link>http://www.netbeans.org/kb/docs/ruby/rails-quickstart.html</link>
+    <description>How to develop Ruby on Rails applications with the NetBeans IDE.</description>
+    <pubDate>Mon, 22 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+  <item>
+    <title>Video of Working with Integrated Issue Tracking</title>
+    <link>http://netbeans.org/kb/docs/ide/kenai-issuetracking-screencast.html</link>
+    <description>A screencast how to work with a registered issue tracker in NetBeans IDE 6.8.</description>
+    <pubDate>Fri, 19 Mar 2010 00:00:00 +0100</pubDate>
+  </item>
+
+
+</channel>
+</rss>
+

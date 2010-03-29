@@ -1,0 +1,692 @@
+<record>
+  <date>2010-03-28T15:58:42</date>
+  <millis>1269781122857</millis>
+  <sequence>1</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T15:58:42</date>
+  <millis>1269781122888</millis>
+  <sequence>2</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T15:58:42</date>
+  <millis>1269781122888</millis>
+  <sequence>3</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T15:58:51</date>
+  <millis>1269781131451</millis>
+  <sequence>9</sequence>
+  <level>INFO</level>
+  <thread>12</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T15:59:04</date>
+  <millis>1269781144842</millis>
+  <sequence>10</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>13</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2010-03-28T15:59:10</date>
+  <millis>1269781150810</millis>
+  <sequence>11</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>13</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T15:59:11</date>
+  <millis>1269781151763</millis>
+  <sequence>12</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>11</thread>
+  <message>LOG_WINDOW_ACTIVATED</message>
+  <key>LOG_WINDOW_ACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+  <param>890</param>
+</record>
+<record>
+  <date>2010-03-28T16:27:51</date>
+  <millis>1269782871920</millis>
+  <sequence>1</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T16:27:51</date>
+  <millis>1269782871935</millis>
+  <sequence>2</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T16:27:51</date>
+  <millis>1269782871935</millis>
+  <sequence>3</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T16:27:57</date>
+  <millis>1269782877420</millis>
+  <sequence>9</sequence>
+  <level>INFO</level>
+  <thread>12</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T16:28:06</date>
+  <millis>1269782886357</millis>
+  <sequence>10</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>13</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:14:47</date>
+  <millis>1269785687404</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:14:47</date>
+  <millis>1269785687404</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:14:47</date>
+  <millis>1269785687404</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:14:53</date>
+  <millis>1269785693310</millis>
+  <sequence>12</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:14:56</date>
+  <millis>1269785696795</millis>
+  <sequence>13</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:19:22</date>
+  <millis>1269785962420</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:19:22</date>
+  <millis>1269785962435</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:19:22</date>
+  <millis>1269785962435</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:19:29</date>
+  <millis>1269785969826</millis>
+  <sequence>12</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:19:46</date>
+  <millis>1269785986685</millis>
+  <sequence>13</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:25:18</date>
+  <millis>1269786318029</millis>
+  <sequence>14</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:25:27</date>
+  <millis>1269786327435</millis>
+  <sequence>15</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Actions$MenuItem[Open Project...]</param>
+  <param>org.openide.awt.Actions$MenuItem</param>
+  <param>org.netbeans.modules.project.ui.actions.OpenProject[Open Proj&amp;ect...]</param>
+  <param>org.netbeans.modules.project.ui.actions.OpenProject</param>
+  <param>Open Proj&amp;ect...</param>
+</record>
+<record>
+  <date>2010-03-28T17:25:40</date>
+  <millis>1269786340920</millis>
+  <sequence>16</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>CONFIG</level>
+  <thread>13</thread>
+  <message>UI_OPEN_PROJECTS</message>
+  <key>UI_OPEN_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:25:40</date>
+  <millis>1269786340920</millis>
+  <sequence>17</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>INFO</level>
+  <thread>13</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:09</date>
+  <millis>1269786429826</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:09</date>
+  <millis>1269786429857</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:09</date>
+  <millis>1269786429857</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:27:16</date>
+  <millis>1269786436748</millis>
+  <sequence>12</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:26</date>
+  <millis>1269786446420</millis>
+  <sequence>13</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>CONFIG</level>
+  <thread>12</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:26</date>
+  <millis>1269786446420</millis>
+  <sequence>14</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>INFO</level>
+  <thread>12</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:29</date>
+  <millis>1269786449967</millis>
+  <sequence>15</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>13</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:27:40</date>
+  <millis>1269786460498</millis>
+  <sequence>70</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>13</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:48:50</date>
+  <millis>1269787730029</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:48:50</date>
+  <millis>1269787730045</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:48:50</date>
+  <millis>1269787730045</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:48:56</date>
+  <millis>1269787736592</millis>
+  <sequence>13</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:49:07</date>
+  <millis>1269787747904</millis>
+  <sequence>14</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>CONFIG</level>
+  <thread>12</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:49:07</date>
+  <millis>1269787747904</millis>
+  <sequence>15</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>INFO</level>
+  <thread>12</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2010-03-28T17:49:28</date>
+  <millis>1269787768935</millis>
+  <sequence>22</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>14</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:10</date>
+  <millis>1269788170435</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:10</date>
+  <millis>1269788170451</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:10</date>
+  <millis>1269788170451</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:56:16</date>
+  <millis>1269788176154</millis>
+  <sequence>12</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:23</date>
+  <millis>1269788183138</millis>
+  <sequence>13</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:27</date>
+  <millis>1269788187763</millis>
+  <sequence>14</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>CONFIG</level>
+  <thread>13</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:27</date>
+  <millis>1269788187763</millis>
+  <sequence>15</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>INFO</level>
+  <thread>13</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2010-03-28T17:56:56</date>
+  <millis>1269788216326</millis>
+  <sequence>22</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>12</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2010-03-28T17:57:20</date>
+  <millis>1269788240420</millis>
+  <sequence>23</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:57:23</date>
+  <millis>1269788243029</millis>
+  <sequence>24</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>15</thread>
+  <message>LOG_WINDOW_ACTIVATED</message>
+  <key>LOG_WINDOW_ACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+  <param>1172</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:14</date>
+  <millis>1269788294170</millis>
+  <sequence>5</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>CPU INFO</message>
+  <param>2</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:14</date>
+  <millis>1269788294185</millis>
+  <sequence>6</sequence>
+  <level>FINEST</level>
+  <thread>10</thread>
+  <message>SCREEN SIZE</message>
+  <param>1024</param>
+  <param>768</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:14</date>
+  <millis>1269788294185</millis>
+  <sequence>7</sequence>
+  <level>CONFIG</level>
+  <thread>10</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2010-03-28T17:58:22</date>
+  <millis>1269788302529</millis>
+  <sequence>12</sequence>
+  <level>INFO</level>
+  <thread>11</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>2146742272</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:24</date>
+  <millis>1269788304060</millis>
+  <sequence>13</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>FINER</level>
+  <thread>12</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.openide.awt.AlwaysEnabledAction[null]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>null</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:36</date>
+  <millis>1269788316451</millis>
+  <sequence>14</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>CONFIG</level>
+  <thread>13</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:36</date>
+  <millis>1269788316451</millis>
+  <sequence>15</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>INFO</level>
+  <thread>13</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2010-03-28T17:58:46</date>
+  <millis>1269788326654</millis>
+  <sequence>19</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>12</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2010-03-28T17:58:47</date>
+  <millis>1269788327060</millis>
+  <sequence>20</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>FINE</level>
+  <thread>12</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
