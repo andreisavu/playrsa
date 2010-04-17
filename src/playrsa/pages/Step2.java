@@ -8,9 +8,9 @@
  *
  * Created on Apr 13, 2010, 1:56:51 AM
  */
-
 package playrsa.pages;
 
+import java.math.BigInteger;
 import org.ciscavate.cjwizard.WizardSettings;
 import playrsa.RSAWizardPage;
 
@@ -52,6 +52,12 @@ public class Step2 extends RSAWizardPage {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        N = new javax.swing.JTextField();
+        N.setName("N");
+        jLabel4 = new javax.swing.JLabel();
+        Euler = new javax.swing.JTextField();
+        Euler.setName("Euler");
 
         jLabel1.setText("Compute n = pq.");
 
@@ -165,6 +171,10 @@ public class Step2 extends RSAWizardPage {
 
         jLabel2.setText("Compute φ(pq) = (p − 1)(q − 1). (φ is Euler's totient function).");
 
+        jLabel3.setText("N:");
+
+        jLabel4.setText("φ:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -176,8 +186,16 @@ public class Step2 extends RSAWizardPage {
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(29, 29, 29))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(N, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Euler, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,12 +208,20 @@ public class Step2 extends RSAWizardPage {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(N, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Euler, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Euler;
+    private javax.swing.JTextField N;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -204,6 +230,8 @@ public class Step2 extends RSAWizardPage {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -217,6 +245,9 @@ public class Step2 extends RSAWizardPage {
 
     @Override
     public void setup_page(WizardSettings settings) {
+        BigInteger P = new BigInteger((String) settings.get("P"));
+        BigInteger Q = new BigInteger((String) settings.get("Q"));
+        N.setText(P.multiply(Q).toString());
+        Euler.setText(P.subtract(new BigInteger("-1").multiply(Q.subtract(new BigInteger("-1")))).toString());
     }
-
 }
