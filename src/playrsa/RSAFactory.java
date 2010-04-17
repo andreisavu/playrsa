@@ -13,7 +13,6 @@ import playrsa.pages.Step1;
 import playrsa.pages.Step2;
 import playrsa.pages.Step3;
 import playrsa.pages.Step4;
-import playrsa.pages.Step5;
 import playrsa.pages.WelcomePage;
 
 class RSAFactory implements PageFactory {
@@ -24,7 +23,6 @@ class RSAFactory implements PageFactory {
         new Step2(),
         new Step3(),
         new Step4(),
-        new Step5(),
         new KeyPairPage(),
         new GetMessagePage(),
         new EncryptedMessagePage(),

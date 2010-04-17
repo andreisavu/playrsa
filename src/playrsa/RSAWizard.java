@@ -12,8 +12,8 @@ public class RSAWizard extends JDialog {
 
     private static Log log = LogFactory.getLog(RSAWizard.class);
 
-    private final static int WIZARD_WIDTH = 700;
-    private final static int WIZARD_HEIGHT = 500;
+    private final static int WIZARD_WIDTH = 750;
+    private final static int WIZARD_HEIGHT = 540;
 
     public RSAWizard() {
         final WizardContainer container = 
