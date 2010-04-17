@@ -11,13 +11,14 @@
 
 package playrsa.pages;
 
-import org.ciscavate.cjwizard.WizardPage;
+import org.ciscavate.cjwizard.WizardSettings;
+import playrsa.RSAWizardPage;
 
 /**
  *
  * @author andrei
  */
-public class KeyPairPage extends WizardPage {
+public class KeyPairPage extends RSAWizardPage {
 
     /** Creates new form KeyPair */
     public KeyPairPage() {
@@ -238,5 +239,9 @@ public class KeyPairPage extends WizardPage {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setup_page(WizardSettings settings) {
+    }
 
 }

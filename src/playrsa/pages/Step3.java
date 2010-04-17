@@ -11,13 +11,14 @@
 
 package playrsa.pages;
 
-import org.ciscavate.cjwizard.WizardPage;
+import org.ciscavate.cjwizard.WizardSettings;
+import playrsa.RSAWizardPage;
 
 /**
  *
  * @author andrei
  */
-public class Step3 extends WizardPage {
+public class Step3 extends RSAWizardPage {
 
     /** Creates new form Step3 */
     public Step3() {
@@ -237,5 +238,9 @@ public class Step3 extends WizardPage {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setup_page(WizardSettings settings) {
+    }
 
 }

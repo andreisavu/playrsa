@@ -17,7 +17,7 @@ import playrsa.pages.WelcomePage;
 
 class RSAFactory implements PageFactory {
 
-    private final WizardPage[] pages = { 
+    private final RSAWizardPage[] pages = {
         new WelcomePage(),
         new Step1(),
         new Step2(),
@@ -30,7 +30,9 @@ class RSAFactory implements PageFactory {
     };
 
     public WizardPage createPage(List<WizardPage> path, WizardSettings settings) {
-        return pages[path.size()];
+        RSAWizardPage page = pages[path.size()];
+        page.setup_page(settings);
+        return page;
     }
 
 }

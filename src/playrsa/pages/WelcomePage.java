@@ -6,13 +6,14 @@
 
 package playrsa.pages;
 
-import org.ciscavate.cjwizard.WizardPage;
+import org.ciscavate.cjwizard.WizardSettings;
+import playrsa.RSAWizardPage;
 
 /**
  *
  * @author andrei
  */
-public class WelcomePage extends WizardPage {
+public class WelcomePage extends RSAWizardPage {
 
     /** Creates new form Welcome */
     public WelcomePage() {
@@ -243,5 +244,9 @@ public class WelcomePage extends WizardPage {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setup_page(WizardSettings settings) {
+    }
 
 }

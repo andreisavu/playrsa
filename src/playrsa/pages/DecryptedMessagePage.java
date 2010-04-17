@@ -13,12 +13,13 @@ package playrsa.pages;
 import java.util.List;
 import org.ciscavate.cjwizard.WizardPage;
 import org.ciscavate.cjwizard.WizardSettings;
+import playrsa.RSAWizardPage;
 
 /**
  *
  * @author andrei
  */
-public class DecryptedMessagePage extends WizardPage {
+public class DecryptedMessagePage extends RSAWizardPage {
 
     /** Creates new form DecryptedPage */
     public DecryptedMessagePage() {
@@ -235,4 +236,8 @@ public class DecryptedMessagePage extends WizardPage {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setup_page(WizardSettings settings) {
+    }
 }
