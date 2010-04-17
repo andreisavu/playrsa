@@ -8,9 +8,11 @@
  *
  * Created on Apr 13, 2010, 1:51:13 AM
  */
-
 package playrsa.pages;
 
+import java.math.BigInteger;
+import java.util.Random;
+import javax.swing.JTextField;
 import org.ciscavate.cjwizard.WizardSettings;
 import playrsa.RSAWizardPage;
 
@@ -24,6 +26,11 @@ public class Step1 extends RSAWizardPage {
     public Step1() {
         super("step1", "");
         initComponents();
+    }
+
+    private void generatePrime(JTextField textField, int bits) {
+        BigInteger number = BigInteger.probablePrime(bits, new Random());
+        textField.setText(number.toString());
     }
 
     /** This method is called from within the constructor to
@@ -51,10 +58,17 @@ public class Step1 extends RSAWizardPage {
         jPanel7 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
+        P = new javax.swing.JTextField();
+        P.setName("P");
+        Q = new javax.swing.JTextField();
+        Q.setName("Q");
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(620, 407));
 
-        jLabel1.setText("Choose two distinct prime numbers p and q");
+        jLabel1.setText("Choose two distinct prime numbers P and Q");
 
         jTabbedPane6.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane6.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
@@ -76,16 +90,16 @@ public class Step1 extends RSAWizardPage {
         jLabel64.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel64.setText("1.4 Pas 4");
 
-        jLabel66.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel66.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel66.setText("2. Perechea de chei");
 
-        jLabel67.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel67.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel67.setText("3. Introducere mesaj");
 
-        jLabel68.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel68.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel68.setText("4. Mesaj criptat");
 
-        jLabel69.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel69.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel69.setText("5. Mesaj decriptat");
 
         jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/playrsa/pages/rsa.jpeg"))); // NOI18N
@@ -150,19 +164,30 @@ public class Step1 extends RSAWizardPage {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 226, Short.MAX_VALUE)
+            .addGap(0, 230, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+            .addGap(0, 431, Short.MAX_VALUE)
         );
 
         jTabbedPane6.addTab("Ajutor", jPanel7);
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Alegerea lui p si q");
+
+        jLabel2.setText("P:");
+
+        jLabel3.setText("Q:");
+
+        jButton1.setText("Regenerate");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -171,32 +196,58 @@ public class Step1 extends RSAWizardPage {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Q, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE))
+                    .addComponent(jButton1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel1)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(P, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(Q, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        generatePrime(P, numberOfBits / 2);
+        generatePrime(Q, numberOfBits / 2);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField P;
+    private javax.swing.JTextField Q;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
@@ -213,8 +264,17 @@ public class Step1 extends RSAWizardPage {
     private javax.swing.JTabbedPane jTabbedPane6;
     // End of variables declaration//GEN-END:variables
 
+    private int numberOfBits;
+    
     @Override
     public void setup_page(WizardSettings settings) {
+        int bits = Integer.parseInt((String) settings.get("NumberOfBits"));
+        if (P.getText().equals("") || numberOfBits != bits) {
+            generatePrime(P, bits / 2);
+        }
+        if (Q.getText().equals("") || numberOfBits != bits) {
+            generatePrime(Q, bits / 2);
+        }
+        numberOfBits = bits;
     }
-
 }
