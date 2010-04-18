@@ -228,6 +228,8 @@ public class Step4 extends RSAWizardPage {
     public void setup_page(WizardSettings settings) {
         BigInteger euler = new BigInteger((String)settings.get("Euler"));
         BigInteger E = new BigInteger((String)settings.get("E"));
+        
+        // Docs: http://en.wikipedia.org/wiki/Modular_multiplicative_inverse 
         D.setText(E.modInverse(euler).toString());
     }
 
