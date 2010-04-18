@@ -11,6 +11,7 @@
 
 package playrsa.pages;
 
+import java.math.BigInteger;
 import org.ciscavate.cjwizard.WizardSettings;
 import playrsa.RSAWizardPage;
 
@@ -37,10 +38,12 @@ public class KeyPairPage extends RSAWizardPage {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        PUK = new javax.swing.JTextArea();
+        PUK.setName("PUK");
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        PRK = new javax.swing.JTextArea();
+        PRK.setName("PRK");
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -59,15 +62,15 @@ public class KeyPairPage extends RSAWizardPage {
 
         jLabel1.setText("Public key");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        PUK.setColumns(20);
+        PUK.setRows(5);
+        jScrollPane1.setViewportView(PUK);
 
         jLabel2.setText("Private key");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        PRK.setColumns(20);
+        PRK.setRows(5);
+        jScrollPane2.setViewportView(PRK);
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
@@ -113,7 +116,7 @@ public class KeyPairPage extends RSAWizardPage {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -151,7 +154,7 @@ public class KeyPairPage extends RSAWizardPage {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -214,6 +217,8 @@ public class KeyPairPage extends RSAWizardPage {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea PRK;
+    private javax.swing.JTextArea PUK;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -233,12 +238,16 @@ public class KeyPairPage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setup_page(WizardSettings settings) {
+        BigInteger n= new BigInteger((String)settings.get("N"));
+        BigInteger euler= new BigInteger((String)settings.get("E"));
+        BigInteger d= new BigInteger((String)settings.get("D"));
+        PUK.setText("("+n.toString()+","+euler.toString()+")");
+        PRK.setText("("+n.toString()+","+d.toString()+")");        
     }
+    
 
 }
