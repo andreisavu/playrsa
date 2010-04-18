@@ -10,6 +10,7 @@
  */
 package playrsa.pages;
 
+import java.math.BigInteger;
 import java.util.List;
 import org.ciscavate.cjwizard.WizardPage;
 import org.ciscavate.cjwizard.WizardSettings;
@@ -38,7 +39,7 @@ public class DecryptedMessagePage extends RSAWizardPage {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        DecryptedMessage = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -58,9 +59,9 @@ public class DecryptedMessagePage extends RSAWizardPage {
 
         jLabel1.setText("Decrypted Message");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        DecryptedMessage.setColumns(20);
+        DecryptedMessage.setRows(5);
+        jScrollPane1.setViewportView(DecryptedMessage);
 
         jLabel2.setText("Teorie despre cum se face");
 
@@ -213,6 +214,7 @@ public class DecryptedMessagePage extends RSAWizardPage {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea DecryptedMessage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -231,10 +233,14 @@ public class DecryptedMessagePage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setup_page(WizardSettings settings) {
+        BigInteger N = new BigInteger((String)settings.get("N"));
+        BigInteger D = new BigInteger((String)settings.get("D"));
+        BigInteger C = new BigInteger((String)settings.get("EncryptedMessage"));
+        // BigInteger M = C.pow(D.intValue()).mod(N);
+        // DecryptedMessage.setText(new String(M.toByteArray()));
     }
 }

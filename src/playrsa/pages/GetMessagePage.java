@@ -37,7 +37,8 @@ public class GetMessagePage extends RSAWizardPage {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        Message = new javax.swing.JTextArea();
+        Message.setName("Message");
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -56,10 +57,10 @@ public class GetMessagePage extends RSAWizardPage {
 
         jLabel1.setText("Message");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("A random text message");
-        jScrollPane1.setViewportView(jTextArea1);
+        Message.setColumns(20);
+        Message.setRows(5);
+        Message.setText("A random text message");
+        jScrollPane1.setViewportView(Message);
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
@@ -200,6 +201,7 @@ public class GetMessagePage extends RSAWizardPage {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Message;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -217,7 +219,6 @@ public class GetMessagePage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
     @Override

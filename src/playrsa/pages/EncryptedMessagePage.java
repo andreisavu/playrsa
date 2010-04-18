@@ -11,6 +11,7 @@
 
 package playrsa.pages;
 
+import java.math.BigInteger;
 import org.ciscavate.cjwizard.WizardSettings;
 import playrsa.RSAWizardPage;
 
@@ -37,7 +38,8 @@ public class EncryptedMessagePage extends RSAWizardPage {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        EncryptedMessage = new javax.swing.JTextArea();
+        EncryptedMessage.setName("EncryptedMessage");
         jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -57,9 +59,9 @@ public class EncryptedMessagePage extends RSAWizardPage {
 
         jLabel1.setText("Show encrypted message");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        EncryptedMessage.setColumns(20);
+        EncryptedMessage.setRows(5);
+        jScrollPane1.setViewportView(EncryptedMessage);
 
         jLabel2.setText("Explicatie scurta despre cum s-a facut criptarea");
 
@@ -205,6 +207,7 @@ public class EncryptedMessagePage extends RSAWizardPage {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea EncryptedMessage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -223,11 +226,17 @@ public class EncryptedMessagePage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setup_page(WizardSettings settings) {
+        String message = (String)settings.get("Message");
+        BigInteger m = new BigInteger(message.getBytes());
+        BigInteger e = new BigInteger((String)settings.get("E"));
+        BigInteger n = new BigInteger((String)settings.get("N"));
+
+        BigInteger result = m.pow(e.intValue()).mod(n);
+        EncryptedMessage.setText(result.toString());
     }
 
 }
