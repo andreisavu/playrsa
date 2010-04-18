@@ -19,10 +19,15 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel16" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
                   <Component id="jSeparator1" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="1">
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="35" max="32767" attributes="0"/>
           </Group>
@@ -38,6 +43,11 @@
               <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="D" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -262,6 +272,16 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Determine d (using modular arithmetic) which satisfies the congruence relation ."/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="D">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="D.setName(&quot;D&quot;);"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

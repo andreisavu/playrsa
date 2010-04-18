@@ -314,6 +314,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="E">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="E.setName(&quot;E&quot;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

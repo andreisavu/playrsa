@@ -69,6 +69,7 @@ public class Step3 extends RSAWizardPage {
         jLabel9 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         E = new javax.swing.JTextField();
+        E.setName("E");
         jButton1 = new javax.swing.JButton();
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
