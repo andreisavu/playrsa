@@ -21,6 +21,10 @@ import playrsa.RSAWizardPage;
  */
 public class EncryptedMessagePage extends RSAWizardPage {
 
+   int m1[]=new  int[1000];
+   int m2[]=new int[1000];
+//    BigInteger c[]=new BigInteger[1000];
+     double c[]=new double[1000];
     /** Creates new form EncryptedPage */
     public EncryptedMessagePage() {
         super("encryptedpage", "");
@@ -231,12 +235,23 @@ public class EncryptedMessagePage extends RSAWizardPage {
     @Override
     public void setup_page(WizardSettings settings) {
         String message = (String)settings.get("Message");
-        BigInteger m = new BigInteger(message.getBytes());
+        BigInteger mes = new BigInteger(message.getBytes());
         BigInteger e = new BigInteger((String)settings.get("E"));
         BigInteger n = new BigInteger((String)settings.get("N"));
-
-        BigInteger result = m.pow(e.intValue()).mod(n);
-        EncryptedMessage.setText(result.toString());
+        BigInteger d = new BigInteger((String)settings.get("D"));
+        
+//        BigInteger result = m.pow(e.intValue()).mod(n);
+//        EncryptedMessage.setText(result.toString());
+        int e_aux=17;
+        byte[] b = message.getBytes();
+//        System.out.println(b.length);
+        for (int i=0;i<=b.length-1;i++){
+            m1[i]=b[i];
+//            c[i].modPow(e, n);
+            c[i]=Math.pow(m1[i],e_aux)%n.intValue();
+            m2[i]=(int)(Math.pow(c[i],d.doubleValue())%n.intValue());
+            System.out.println(m1[i]+"  "+c[i]+" "+ m2[i]);
+//            System.out.println(m[i]);            
+        }        
     }
-
 }
