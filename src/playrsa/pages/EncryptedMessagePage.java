@@ -21,10 +21,11 @@ import playrsa.RSAWizardPage;
  */
 public class EncryptedMessagePage extends RSAWizardPage {
 
+    int i=0;
    int m1[]=new  int[1000];
-   int m2[]=new int[1000];
-//    BigInteger c[]=new BigInteger[1000];
-     double c[]=new double[1000];
+   double m2[]=new double[1000];
+    BigInteger c[]=new BigInteger[1000];
+//     double c[]=new double[1000];
     /** Creates new form EncryptedPage */
     public EncryptedMessagePage() {
         super("encryptedpage", "");
@@ -243,18 +244,14 @@ public class EncryptedMessagePage extends RSAWizardPage {
         BigInteger n = new BigInteger((String)settings.get("N"));
         BigInteger d = new BigInteger((String)settings.get("D"));
         
-//        BigInteger result = m.pow(e.intValue()).mod(n);
-//        EncryptedMessage.setText(result.toString());
-        int e_aux=17;
-        byte[] b = message.getBytes();
-//        System.out.println(b.length);
-        for (int i=0;i<=b.length-1;i++){
-            m1[i]=b[i];
-//            c[i].modPow(e, n);
-            c[i]=Math.pow(m1[i],e_aux)%n.intValue();
-            m2[i]=(int)(Math.pow(c[i],d.doubleValue())%n.intValue());
-            System.out.println(m1[i]+"  "+c[i]+" "+ m2[i]);
-//            System.out.println(m[i]);            
-        }        
+        int e_aux=17;       
+        for (i=0;i<message.length();i++){
+            m1[i]=(int)(message.charAt(i));             //asignez un int fiecarui char din string
+            System.out.print(m1[i]+" ");
+            c[i]=BigInteger.valueOf(m1[i]).modPow( BigInteger.valueOf(e_aux),n); //valoarea calc la criptare m^e mod n
+            System.out.print(c[i]); System.out.print("   ");
+            System.out.println(c[i].modPow(d,n));       //valoarea calc la decriptare c^d mod n
+            //Valorile nu coincid!!!!
+        }           
     }
 }
