@@ -42,7 +42,6 @@ public class Step1 extends RSAWizardPage {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jTabbedPane6 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
@@ -56,6 +55,7 @@ public class Step1 extends RSAWizardPage {
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        jTextPane1 = new javax.swing.JTextPane();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         P = new javax.swing.JTextField();
@@ -65,10 +65,9 @@ public class Step1 extends RSAWizardPage {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jTextPane2 = new javax.swing.JTextPane();
 
         setPreferredSize(new java.awt.Dimension(620, 407));
-
-        jLabel1.setText("Choose two distinct prime numbers P and Q");
 
         jTabbedPane6.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane6.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
@@ -160,15 +159,24 @@ public class Step1 extends RSAWizardPage {
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane1.setEditable(false);
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane1.setText("     Descompunerea in factori primi a unui numar natural n este o operatie dificila, intrucat singura metoda cunoscuta consta in verificarea  tuturor numerelor (si sunt aproximativ n / ln(n) numere prime) - sau cel putin pana la descoperirea celui mai mic factor prim - adica a p / ln(p) numere, unde p = √n.\n     Astfel, de exemplu, intr-o cheie pe 128 de biti, exista aproimativ 2^128 / ln(2^128) factori primi; cu o putere de calcul care poate testa 109 numere pe secunda, tot ar fi necesari cca. 120 x 10^15 ani - adica de 10 milioane de ori durata actuala a universului.\n     Iar daca avem de-a face cu numere naturale exprimate in binar, lucrurile stau si mai prost, in pofida faptului ca exista un algoritm de cautare a factorilor primi pentru astfel de numere  - algoritm cunoscut sub numele de sita pentru campuri de numere [Number Field Sieve(NFS)].");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("Ajutor", jPanel7);
@@ -176,18 +184,26 @@ public class Step1 extends RSAWizardPage {
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel16.setText("Alegerea lui p si q");
+        jLabel16.setText("Alegerea celor doua numere prime mari p si q");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("P:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Q:");
 
-        jButton1.setText("Regenerate");
+        jButton1.setText("Regenerare");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jTextPane2.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane2.setEditable(false);
+        jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane2.setText("     Principiul de baza al algoritmului RSA este dificultatea factorizarii numerelor mari.\n     Acesta utilizeaza o expresie matematica bazata pe inmultirea a doua numere prime mari . In esenta cheia publica rezulta din produsul a doua numere prime mari, alese aleator, iar cheia privata este constituita din insasi cele doua numere prime. \n    Algoritmul cripteaza textul clar utilizand cele doua numere prime si decripteaza textul cifrat cu cele doua numere prime.\n    Desi in practica cele doua numere prime mari alese au sute de cifre, ducand la obtinerea de chei de minim 1024 de biti (o cheie de numai 512 biti nemaifiind considerata sigura), pentru o exemplificare clara a algoritmului, numerele prime alese in cazul nostru vor fi semnificativ mai mici.\n    Acestea sunt generate mai jos :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -195,35 +211,42 @@ public class Step1 extends RSAWizardPage {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Q, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+                            .addComponent(jButton1))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Q, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))
-                    .addComponent(jButton1))
-                .addContainerGap())
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                        .addGap(29, 29, 29))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(P, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -232,9 +255,8 @@ public class Step1 extends RSAWizardPage {
                             .addComponent(jLabel3)
                             .addComponent(Q, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
-                    .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -247,7 +269,6 @@ public class Step1 extends RSAWizardPage {
     private javax.swing.JTextField P;
     private javax.swing.JTextField Q;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -265,6 +286,8 @@ public class Step1 extends RSAWizardPage {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane6;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     // End of variables declaration//GEN-END:variables
 
     private int numberOfBits;
