@@ -157,17 +157,17 @@ public class Step2 extends RSAWizardPage {
 
         jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane1.setEditable(false);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13));
         jTextPane1.setText("          Leonhard Euler a fost un matematician şi fizician elveţian pionier ce si-a petrecut cea mai mare parte a vieţii în Rusia şi Germania. A facut descoperiri importante în domenii diverse, cum ar fi calculul infinitezimal şi teoria grafurilor. El a introdus, de asemenea, o mare parte a terminologiei si notatiei matematice moderne, în special pentru analiza matematica, cum ar fi noţiunea unei funcţii matematice.Este renumit, de asemenea, pentru activitatea sa in");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel2.setText("Leonhard Euler");
 
         jLabel10.setText("(15 Aprilie 1707 – 18 Septembrie 1783)");
 
         jTextPane4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane4.setEditable(false);
-        jTextPane4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane4.setFont(new java.awt.Font("Tahoma", 0, 13));
         jTextPane4.setText("mecanica, dinamica fluidelor, optica si astronomie.\n          ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -185,9 +185,9 @@ public class Step2 extends RSAWizardPage {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
                 .addComponent(jTextPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(22, 22, 22))
             .addComponent(jTextPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
@@ -201,8 +201,8 @@ public class Step2 extends RSAWizardPage {
                 .addComponent(jTextPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -213,22 +213,22 @@ public class Step2 extends RSAWizardPage {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Calcularea lui n si φ");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel3.setText("n:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel4.setText("φ:");
 
         jTextPane2.setBackground(new java.awt.Color(238, 238, 238));
         jTextPane2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane2.setEditable(false);
-        jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14));
         jTextPane2.setText("    Se calculeaza numerul n ca fiind produsul celor doua numere prime p si q alese la pasul precedent. Rezultatul este cel de mai jos:");
 
         jTextPane3.setBackground(new java.awt.Color(238, 238, 238));
         jTextPane3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane3.setEditable(false);
-        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14));
         jTextPane3.setText("    Se calculeaza φ(n) - Functia totient a lui Euler\n    Aceasta functie are ca rezultat numarul de numere intregi pozitive mai mici decat n si coprime cu n. Pentru a putea evalua valoarea functiei φ(n), plecam de la Teorema fundamentala a aritmeticii, care ne spune ca orice numar natural mai mare ca 1, are o factorizare unica in termeni reprezentati de numere prime.\n    De exemplu, daca avem numarul 30, factorizarea acestuia de numere prime va fi 2 x 3 x 5. De asemenea pentru n=72, vom gasi ca se factorizeaza in 8 x 9 = 2^3 x 3^2.\n    Pentru n numar prim, va rezulta ca toate numerele pozitive intregi mai mici decat n, vor fi coprime cu n, asadar φ(n)=n-1.\n   Tinand cont de faptul ca φ(1)=1 si functia totient a lui Euler este multiplicativa, putem ajunge usor la concluzia ca φ(n x m)= φ(n) x φ(m).\n   Asadar, in cazul nostru, vom avea φ(n) = φ(p) x φ(q) = (p-1) x (q-1). Rezultatul este cel de mai jos:   \n\t\n    \t");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
