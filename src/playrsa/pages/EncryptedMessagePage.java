@@ -243,8 +243,10 @@ public class EncryptedMessagePage extends RSAWizardPage {
         BigInteger e = new BigInteger((String)settings.get("E"));
         BigInteger n = new BigInteger((String)settings.get("N"));
         BigInteger d = new BigInteger((String)settings.get("D"));
+        BigInteger euler = new BigInteger((String)settings.get("Euler"));
         
-        int e_aux=17;       
+        int e_aux=17;
+        d=e.modInverse(euler);
         for (i=0;i<message.length();i++){
             m1[i]=(int)(message.charAt(i));             //asignez un int fiecarui char din string
             System.out.print(m1[i]+" ");
@@ -252,6 +254,7 @@ public class EncryptedMessagePage extends RSAWizardPage {
             System.out.print(c[i]); System.out.print("   ");
             System.out.println(c[i].modPow(d,n));       //valoarea calc la decriptare c^d mod n
             //Valorile nu coincid!!!!
+
         }           
     }
 }
