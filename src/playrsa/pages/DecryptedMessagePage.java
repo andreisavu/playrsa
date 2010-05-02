@@ -40,7 +40,6 @@ public class DecryptedMessagePage extends RSAWizardPage {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         DecryptedMessage = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -56,14 +55,14 @@ public class DecryptedMessagePage extends RSAWizardPage {
         jPanel2 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jTextPane3 = new javax.swing.JTextPane();
 
-        jLabel1.setText("Decrypted Message");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Mesajul decriptat este urmatorul:");
 
         DecryptedMessage.setColumns(20);
         DecryptedMessage.setRows(5);
         jScrollPane1.setViewportView(DecryptedMessage);
-
-        jLabel2.setText("Teorie despre cum se face");
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
@@ -173,6 +172,12 @@ public class DecryptedMessagePage extends RSAWizardPage {
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
+        jTextPane3.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane3.setEditable(false);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane3.setText("   Algoritmul de decriptare (la destinatarul B) este urmatorul :\n\n1.  Utilizand cheia privata D, se calculeaza numarul m aferent textului clar\n\t         m = C^d mod n\n\n2.  Se extrage textul clar P din reprezentarea lui ca numar natural m\n\n    Precizari:\n- trebuie tinut cont de faptul ca - aidoma tuturor sistemelor de criptare - decriptare - algoritmul RSA este si el vulnerabil la atacurile cu text clar, atunci cand un tert poate sa aleaga in mod repetat (sau sa afle pe o cale) o parte din textul clar si poate examina rezultatele criptarii.\n-dezvoltarea in urmatoarele decenii a calculatoarelor cuantice - capabile de numeroase calcule simultane - va putea permite spargerea cifrului RSA in intervale de timp relativ scurte.\n   Mai multe informatii despre algoritmul RSA si securitatea oferita de el, se pot gasi in [Kali,93] si [Stin,95]");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -184,8 +189,8 @@ public class DecryptedMessagePage extends RSAWizardPage {
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
+                    .addComponent(jTextPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -201,8 +206,8 @@ public class DecryptedMessagePage extends RSAWizardPage {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
@@ -225,7 +230,6 @@ public class DecryptedMessagePage extends RSAWizardPage {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -236,13 +240,14 @@ public class DecryptedMessagePage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextPane jTextPane3;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setup_page(WizardSettings settings) {
         BigInteger N = new BigInteger((String)settings.get("N"));
         BigInteger D = new BigInteger((String)settings.get("D"));
-        BigInteger C = new BigInteger((String)settings.get("EncryptedMessage"));
+//        BigInteger C = new BigInteger((String)settings.get("EncryptedMessage"));
         // BigInteger M = C.pow(D.intValue()).mod(N);
         // DecryptedMessage.setText(new String(M.toByteArray()));
     }

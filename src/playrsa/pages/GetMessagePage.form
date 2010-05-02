@@ -23,9 +23,10 @@
                   <Component id="jSeparator1" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel16" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" alignment="0" pref="403" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="497" max="32767" attributes="0"/>
+                  <Component id="jTextPane3" pref="497" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -42,10 +43,12 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTextPane3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jTabbedPane1" alignment="0" min="-2" pref="465" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace pref="27" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,7 +56,10 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Message"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Mesaj"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -263,15 +269,37 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="232" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextPane1" pref="222" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="437" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jTextPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextPane1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                    <EmptyBorder bottom="1" left="5" right="5" top="1"/>
+                  </Border>
+                </Property>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="   In practica, nu se lucreaza cu numere naturale mici (ca in exemplul din dreapta) pentru a cripta date, ci se folosesc numere mari.&#xa;   De asemenea, in loc de a incerca sa se reprezinte textul clar direct prin numere naturale, se prefera generarea unei chei de sesiune [session key] aleatoare si utilizarea acesteia pentru a cripta textul clar cu ajutorul unui algoritm conventional cu cheie simetrica (precum TDES) - care este mult mai rapid; apoi se va utiliza altoritmul RSA - mult mai lent - pentru a cripta doar cheia de sesiune. &#xa;   Astfel, expeditorul A va transmite un mesaj cu cheia si textul criptat.&#xa;   Destinatarul B va extrage din mesajul cheia de sesiune criptata si va utiliza cheia lui privata pentru a o decripta. Apoi o va folosi intr-un algoritm conventional de decriptare cu cheie simetrica pentru a decripta intregul text cifrat."/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
@@ -288,6 +316,23 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextPane" name="jTextPane3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="ee" red="ee" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+            <EmptyBorder bottom="1" left="5" right="5" top="1"/>
+          </Border>
+        </Property>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="   Pentru exemplificarea mai usoara a algoritmului, fiecarei litere a textului introdus ii este asociat un numar natural m, conditia necesara pentru ca algoritmul sa functioneze fiind ca m sa fie mai mic decat n. Pentru fiecare numar m, se va calcula un unic cod C, din acelasi domeniu, asa cum vom vedea la partea de criptare a mesajului.&#xa;   Cu acest sistem putem cripta un text clar alegand drept valori m literele alfabetulu englezesc: A = 2, B = 3, ... , Z = 27. In aceste conditii, mesajul (text clar) de exemplu HELLOWORLD va fi reprezentat de multimea de numere naturale (m1, m2, ...)&#xa;&#xa;{9, 6, 13, 13, 16, 24, 16, 19, 13, 5}"/>
       </Properties>
     </Component>
   </SubComponents>

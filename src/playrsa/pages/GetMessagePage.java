@@ -52,10 +52,13 @@ public class GetMessagePage extends RSAWizardPage {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jTextPane1 = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jTextPane3 = new javax.swing.JTextPane();
 
-        jLabel1.setText("Message");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Mesaj");
 
         Message.setColumns(20);
         Message.setRows(5);
@@ -152,15 +155,24 @@ public class GetMessagePage extends RSAWizardPage {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane1.setEditable(false);
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane1.setText("   In practica, nu se lucreaza cu numere naturale mici (ca in exemplul din dreapta) pentru a cripta date, ci se folosesc numere mari.\n   De asemenea, in loc de a incerca sa se reprezinte textul clar direct prin numere naturale, se prefera generarea unei chei de sesiune [session key] aleatoare si utilizarea acesteia pentru a cripta textul clar cu ajutorul unui algoritm conventional cu cheie simetrica (precum TDES) - care este mult mai rapid; apoi se va utiliza altoritmul RSA - mult mai lent - pentru a cripta doar cheia de sesiune. \n   Astfel, expeditorul A va transmite un mesaj cu cheia si textul criptat.\n   Destinatarul B va extrage din mesajul cheia de sesiune criptata si va utiliza cheia lui privata pentru a o decripta. Apoi o va folosi intr-un algoritm conventional de decriptare cu cheie simetrica pentru a decripta intregul text cifrat.");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Ajutor", jPanel2);
@@ -169,6 +181,12 @@ public class GetMessagePage extends RSAWizardPage {
         jLabel16.setText("Introducere mesaj");
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+
+        jTextPane3.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane3.setEditable(false);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane3.setText("   Pentru exemplificarea mai usoara a algoritmului, fiecarei litere a textului introdus ii este asociat un numar natural m, conditia necesara pentru ca algoritmul sa functioneze fiind ca m sa fie mai mic decat n. Pentru fiecare numar m, se va calcula un unic cod C, din acelasi domeniu, asa cum vom vedea la partea de criptare a mesajului.\n   Cu acest sistem putem cripta un text clar alegand drept valori m literele alfabetulu englezesc: A = 2, B = 3, ... , Z = 27. In aceste conditii, mesajul (text clar) de exemplu HELLOWORLD va fi reprezentat de multimea de numere naturale (m1, m2, ...)\n\n{9, 6, 13, 13, 16, 24, 16, 19, 13, 5}");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -181,7 +199,8 @@ public class GetMessagePage extends RSAWizardPage {
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                    .addComponent(jTextPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -196,9 +215,11 @@ public class GetMessagePage extends RSAWizardPage {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -222,6 +243,8 @@ public class GetMessagePage extends RSAWizardPage {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane3;
     // End of variables declaration//GEN-END:variables
 
     @Override
