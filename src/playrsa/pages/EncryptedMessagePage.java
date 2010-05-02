@@ -8,7 +8,6 @@
  *
  * Created on Apr 13, 2010, 2:16:30 AM
  */
-
 package playrsa.pages;
 
 import java.math.BigInteger;
@@ -21,11 +20,6 @@ import playrsa.RSAWizardPage;
  */
 public class EncryptedMessagePage extends RSAWizardPage {
 
-    int i=0;
-   int m1[]=new  int[1000];
-   double m2[]=new double[1000];
-    BigInteger c[]=new BigInteger[1000];
-//     double c[]=new double[1000];
     /** Creates new form EncryptedPage */
     public EncryptedMessagePage() {
         super("encryptedpage", "");
@@ -62,10 +56,11 @@ public class EncryptedMessagePage extends RSAWizardPage {
         jSeparator1 = new javax.swing.JSeparator();
         jTextPane3 = new javax.swing.JTextPane();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel1.setText("Mesajul criptat este urmatorul");
 
         EncryptedMessage.setColumns(20);
+        EncryptedMessage.setLineWrap(true);
         EncryptedMessage.setRows(5);
         jScrollPane1.setViewportView(EncryptedMessage);
 
@@ -113,7 +108,7 @@ public class EncryptedMessagePage extends RSAWizardPage {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -151,7 +146,7 @@ public class EncryptedMessagePage extends RSAWizardPage {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -163,11 +158,11 @@ public class EncryptedMessagePage extends RSAWizardPage {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
+            .addGap(0, 221, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGap(0, 422, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Ajutor", jPanel2);
@@ -180,7 +175,7 @@ public class EncryptedMessagePage extends RSAWizardPage {
         jTextPane3.setBackground(new java.awt.Color(238, 238, 238));
         jTextPane3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane3.setEditable(false);
-        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14));
         jTextPane3.setText("   Algoritmul de criptare (la expeditorul A) este urmatorul :\n\n1.   Se obtine cheia publica a destinatarului B\n\n2.   Se reprezinta textul clar de la pasul precedent ca un numar natural m \"umplut\" aleatoriu pana la dimansiunea dorita, respectand conditia:\n\t          m<n\npentru ca algoritmul sa functioneze corect.\n\n3.   Se calculeaza textul cifrat    C = m^e mod n\n\n4.   Se trimite textul cifrat C destinatarulu B\n");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -217,8 +212,6 @@ public class EncryptedMessagePage extends RSAWizardPage {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea EncryptedMessage;
     private javax.swing.JLabel jLabel1;
@@ -243,23 +236,17 @@ public class EncryptedMessagePage extends RSAWizardPage {
 
     @Override
     public void setup_page(WizardSettings settings) {
-        String message = (String)settings.get("Message");
-        BigInteger mes = new BigInteger(message.getBytes());
-        BigInteger e = new BigInteger((String)settings.get("E"));
-        BigInteger n = new BigInteger((String)settings.get("N"));
-        BigInteger d = new BigInteger((String)settings.get("D"));
-        BigInteger euler = new BigInteger((String)settings.get("Euler"));
-        
-        int e_aux=17;
-        d=e.modInverse(euler);
-        for (i=0;i<message.length();i++){
-            m1[i]=(int)(message.charAt(i));             //asignez un int fiecarui char din string
-            System.out.print(m1[i]+" ");
-            c[i]=BigInteger.valueOf(m1[i]).modPow( BigInteger.valueOf(e_aux),n); //valoarea calc la criptare m^e mod n
-            System.out.print(c[i]); System.out.print("   ");
-            System.out.println(c[i].modPow(d,n));       //valoarea calc la decriptare c^d mod n
-            //Valorile nu coincid!!!!
+        String message = (String) settings.get("Message");
 
-        }           
+        BigInteger e = new BigInteger((String) settings.get("E"));
+        BigInteger n = new BigInteger((String) settings.get("N"));
+
+        String result = "";
+        for(int i=0; i<message.length(); i++) {
+            int ch = message.charAt(i);
+            BigInteger c = BigInteger.valueOf(ch).modPow(e, n);
+            result += c.toString() + " ";
+        }
+        EncryptedMessage.setText(result);
     }
 }

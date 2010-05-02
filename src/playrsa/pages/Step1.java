@@ -113,7 +113,7 @@ public class Step1 extends RSAWizardPage {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                    .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
@@ -151,7 +151,7 @@ public class Step1 extends RSAWizardPage {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel69)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -161,7 +161,7 @@ public class Step1 extends RSAWizardPage {
 
         jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane1.setEditable(false);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13));
         jTextPane1.setText("     Descompunerea in factori primi a unui numar natural n este o operatie dificila, intrucat singura metoda cunoscuta consta in verificarea  tuturor numerelor (si sunt aproximativ n / ln(n) numere prime) - sau cel putin pana la descoperirea celui mai mic factor prim - adica a p / ln(p) numere, unde p = √n.\n     Astfel, de exemplu, intr-o cheie pe 128 de biti, exista aproimativ 2^128 / ln(2^128) factori primi; cu o putere de calcul care poate testa 109 numere pe secunda, tot ar fi necesari cca. 120 x 10^15 ani - adica de 10 milioane de ori durata actuala a universului.\n     Iar daca avem de-a face cu numere naturale exprimate in binar, lucrurile stau si mai prost, in pofida faptului ca exista un algoritm de cautare a factorilor primi pentru astfel de numere  - algoritm cunoscut sub numele de sita pentru campuri de numere [Number Field Sieve(NFS)].");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -176,7 +176,7 @@ public class Step1 extends RSAWizardPage {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
+                .addComponent(jTextPane1))
         );
 
         jTabbedPane6.addTab("Ajutor", jPanel7);
@@ -186,10 +186,10 @@ public class Step1 extends RSAWizardPage {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel16.setText("Alegerea celor doua numere prime mari p si q");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel2.setText("P:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel3.setText("Q:");
 
         jButton1.setText("Regenerare");
@@ -202,7 +202,7 @@ public class Step1 extends RSAWizardPage {
         jTextPane2.setBackground(new java.awt.Color(238, 238, 238));
         jTextPane2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane2.setEditable(false);
-        jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14));
         jTextPane2.setText("     Principiul de baza al algoritmului RSA este dificultatea factorizarii numerelor mari.\n     Acesta utilizeaza o expresie matematica bazata pe inmultirea a doua numere prime mari . In esenta cheia publica rezulta din produsul a doua numere prime mari, alese aleator, iar cheia privata este constituita din insasi cele doua numere prime. \n    Algoritmul cripteaza textul clar utilizand cele doua numere prime si decripteaza textul cifrat cu cele doua numere prime.\n    Desi in practica cele doua numere prime mari alese au sute de cifre, ducand la obtinerea de chei de minim 1024 de biti (o cheie de numai 512 biti nemaifiind considerata sigura), pentru o exemplificare clara a algoritmului, numerele prime alese in cazul nostru vor fi semnificativ mai mici.\n    Acestea sunt generate mai jos :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -218,11 +218,11 @@ public class Step1 extends RSAWizardPage {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(P, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE))
+                                .addComponent(P, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Q, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+                                .addComponent(Q, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE))
                             .addComponent(jButton1))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -231,7 +231,7 @@ public class Step1 extends RSAWizardPage {
                             .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
                         .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                        .addComponent(jTextPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -256,7 +256,7 @@ public class Step1 extends RSAWizardPage {
                             .addComponent(Q, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

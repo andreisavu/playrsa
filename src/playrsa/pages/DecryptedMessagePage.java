@@ -245,10 +245,18 @@ public class DecryptedMessagePage extends RSAWizardPage {
 
     @Override
     public void setup_page(WizardSettings settings) {
-        BigInteger N = new BigInteger((String)settings.get("N"));
-        BigInteger D = new BigInteger((String)settings.get("D"));
-//        BigInteger C = new BigInteger((String)settings.get("EncryptedMessage"));
-        // BigInteger M = C.pow(D.intValue()).mod(N);
-        // DecryptedMessage.setText(new String(M.toByteArray()));
+        String encryptedMessage = (String) settings.get("EncryptedMessage");
+        String parts[] = encryptedMessage.trim().split(" ");
+
+        BigInteger n = new BigInteger((String) settings.get("N"));
+        BigInteger d = new BigInteger((String) settings.get("D"));
+
+        String result = "";
+        for(String ch : parts) {
+            BigInteger c = new BigInteger(ch);
+            BigInteger m = c.modPow(d, n);
+            result += (char)m.intValue();
+        }
+        DecryptedMessage.setText(result);
     }
 }
