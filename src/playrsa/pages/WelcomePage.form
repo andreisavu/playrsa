@@ -23,11 +23,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="jTabbedPane1" min="-2" pref="237" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jSeparator1" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
                   <Component id="jLabel16" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
-                  <Component id="jTextPane2" alignment="0" pref="476" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jTextPane2" min="-2" pref="300" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="171" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jTextPane3" alignment="1" pref="480" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -49,8 +54,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextPane2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jTextPane2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" pref="201" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextPane3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="NumberOfBits" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -273,13 +283,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="232" max="32767" attributes="0"/>
                   <Component id="jLayeredPane1" alignment="0" pref="232" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="437" max="32767" attributes="0"/>
                   <Component id="jLayeredPane1" alignment="0" pref="437" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -372,7 +380,34 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="     Rezistenta la atacuri a cifrului RSA rezida in dificultatea matematica de a gasi factorii primi ai unui numar natural foarte mare. Securitatea algoritmului depinde de dimensiunea cheilor folosite.&#xa;    Acest numar reprezinta baza de la care se porneste pentru generarea celor doua chei folosite. "/>
+        <Property name="text" type="java.lang.String" value="    Algoritmul RSA a fost facut descris in mod public pentru prima oara in anul 1978 de catre autorii sai Ron Rivest, Adi Shamir, si Leonard Adleman, profesori la universitatea MIT.&#xa;    Catre MIT a fost acordat si patentul aferent algoritmului, o data cu lansarea lucrarii &quot;O metoda si sistem criptografic de comunicatii&quot; in anul 1983, unde se folosea pentru prima oara algoritmul RSA.  &#xa;    Criptografia cu cheie publica combinata cu cea cu cheie secreta (din motive de eficienta), lucreaza in felul urmator:"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[3, 3, 3, 0]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextPane" name="jTextPane3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="ee" red="ee" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+            <EmptyBorder bottom="1" left="5" right="5" top="1"/>
+          </Border>
+        </Property>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="   Pentru criptare, textul clar poate fi criptat cu un algoritm cu cheie secreta, generata aleator, care, la randul ei, este criptata cu un algoritm cu cheie publica. De asemenea, combinand cheia privata a lui A cu cheia publica a lui B, se poate obtine o cheie secreta penru un cifru simetric intre A si B.&#xa;    Rezistenta la atacuri a cifrului RSA rezida in dificultatea matematica de a gasi factorii primi ai unui numar natural foarte mare. Securitatea algoritmului depinde de dimensiunea cheilor folosite.&#xa;    Numarul de mai jos reprezinta baza de la care se porneste pentru generarea celor doua chei folosite. "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/playrsa/pages/Shamir.jpg"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

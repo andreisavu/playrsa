@@ -58,13 +58,15 @@ public class WelcomePage extends RSAWizardPage {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jTextPane2 = new javax.swing.JTextPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        jLabel3 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(100, 100));
 
-        NumberOfBits.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        NumberOfBits.setFont(new java.awt.Font("Tahoma", 0, 14));
         NumberOfBits.setText("32");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabel1.setText("Numar de biti");
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -159,7 +161,7 @@ public class WelcomePage extends RSAWizardPage {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel10.setText("Scurt istoric");
         jLabel10.setOpaque(true);
         jLabel10.setBounds(20, 10, 90, 20);
@@ -167,7 +169,7 @@ public class WelcomePage extends RSAWizardPage {
 
         jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane1.setEditable(false);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 13));
         jTextPane1.setText("          RSA (dupa initialele numelor autorilor sai Rivest, Shamir si Adleman ),a fost facut public pentru prima oara in anul 1978 si este un puternic algoritm in domeniul criptografiei, ce foloseste chei publice. \n          Este primul algoritm potrivit atat pentru semnaturi digitale cat si pentru criptare, si a reprezentat unul din primele mari progrese in acest domeniu. \n          RSA este regasit cu precadere in protocoalele comertului electronic, si este considerat a fi sigur atunci candfoloseste implementari recente  si chei suficient de lungi.");
         jTextPane1.setBounds(0, 30, 230, 280);
         jLayeredPane1.add(jTextPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -180,12 +182,10 @@ public class WelcomePage extends RSAWizardPage {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 232, Short.MAX_VALUE)
             .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
             .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
         );
 
@@ -200,7 +200,16 @@ public class WelcomePage extends RSAWizardPage {
         jTextPane2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         jTextPane2.setEditable(false);
         jTextPane2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextPane2.setText("     Rezistenta la atacuri a cifrului RSA rezida in dificultatea matematica de a gasi factorii primi ai unui numar natural foarte mare. Securitatea algoritmului depinde de dimensiunea cheilor folosite.\n    Acest numar reprezinta baza de la care se porneste pentru generarea celor doua chei folosite. ");
+        jTextPane2.setText("    Algoritmul RSA a fost facut descris in mod public pentru prima oara in anul 1978 de catre autorii sai Ron Rivest, Adi Shamir, si Leonard Adleman, profesori la universitatea MIT.\n    Catre MIT a fost acordat si patentul aferent algoritmului, o data cu lansarea lucrarii \"O metoda si sistem criptografic de comunicatii\" in anul 1983, unde se folosea pentru prima oara algoritmul RSA.  \n    Criptografia cu cheie publica combinata cu cea cu cheie secreta (din motive de eficienta), lucreaza in felul urmator:");
+        jTextPane2.setMargin(new java.awt.Insets(3, 3, 3, 0));
+
+        jTextPane3.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        jTextPane3.setEditable(false);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextPane3.setText("   Pentru criptare, textul clar poate fi criptat cu un algoritm cu cheie secreta, generata aleator, care, la randul ei, este criptata cu un algoritm cu cheie publica. De asemenea, combinand cheia privata a lui A cu cheia publica a lui B, se poate obtine o cheie secreta penru un cifru simetric intre A si B.\n    Rezistenta la atacuri a cifrului RSA rezida in dificultatea matematica de a gasi factorii primi ai unui numar natural foarte mare. Securitatea algoritmului depinde de dimensiunea cheilor folosite.\n    Numarul de mai jos reprezinta baza de la care se porneste pentru generarea celor doua chei folosite. ");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/playrsa/pages/Shamir.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -208,11 +217,15 @@ public class WelcomePage extends RSAWizardPage {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -230,8 +243,12 @@ public class WelcomePage extends RSAWizardPage {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(NumberOfBits, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -251,6 +268,7 @@ public class WelcomePage extends RSAWizardPage {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -263,6 +281,7 @@ public class WelcomePage extends RSAWizardPage {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
     // End of variables declaration//GEN-END:variables
 
     @Override
